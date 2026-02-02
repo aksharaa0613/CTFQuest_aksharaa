@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Control Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ Admin Control Panel</h1>
+        <p>Welcome, {{ username }}!</p>
+        
+        <div class="admin-panel">
+            <h3>System Status</h3>
+            <p>✅ Database: Connected</p>
+            <p>✅ Security: Active</p>
+            <p>⚠️ Debug Mode: Enabled</p>
+            
+            <h3>Quick Actions</h3>
+            <button onclick="alert('Feature not implemented')">Manage Users</button>
+            <button onclick="alert('Feature not implemented')">View Logs</button>
+            <button onclick="alert('Feature not implemented')">System Config</button>
+        </div>
+        
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+    
+    <!-- 
+        FLAG LOCATION HINT: 
+        The real treasure requires:
+        1. Proper authentication bypass
+        2. Special User-Agent containing 'ctf'
+        3. Access to /s3cr3t_fl4g_3ndp01nt
+    -->
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>👤 User Dashboard</h1>
+        <p>Welcome, {{ username }}!</p>
+        
+        <div class="user-panel">
+            <h3>Your Profile</h3>
+            <p>Role: Standard User</p>
+            <p>Access Level: Limited</p>
+            
+            <p>🚫 You don't have admin privileges</p>
+        </div>
+        
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</body>
+</html>

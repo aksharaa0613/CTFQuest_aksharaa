@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SecureLogin Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 SecureLogin Portal</h1>
+        <p class="subtitle">Enterprise Security System v2.1</p>
+        
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+        
+        <form method="POST">
+            <div class="form-group">
+                <label>Username:</label>
+                <input type="text" name="username" placeholder="Enter username" required>
+            </div>
+            <div class="form-group">
+                <label>Password:</label>
+                <input type="password" name="password" placeholder="Enter password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        
+        <div class="hints">
+            <p>💡 Hint: Try common credentials</p>
+            <p>🔍 Default users: administrator, guest</p>
+        </div>
+    </div>
+    
+    <!-- TODO: Remove debug info before production -->
+    <!-- Debug endpoint: /debug/info with X-Debug-Token header -->
+</body>
+</html>
